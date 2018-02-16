@@ -1,2 +1,5 @@
-cat <file_name> | gpg -ac -o- | curl -X PUT -T "-" https://transfer.sh/<file_name>.gpg
-curl https://transfer.sh/<hash>/<file_name>.gpg | gpg -o- > <file_name>
+# Encrypt files with password using gpg 
+cat <filename>|gpg -ac -o-|curl -X PUT --upload-file "-" https://transfer.sh/<filename>
+
+# Download and decrypt 
+curl https://transfer.sh/<hash>/<filename>|gpg -o- > <filename>
