@@ -6,6 +6,8 @@ Here’s what you can do:
 
 You need the IP that every container will see your computer as (what’s traditional 127.0.0.1). See IP of HOST available within site container? for instructions on how to get that. It’s as simple as running one command in Terminal.
 
+`"/Applications/Local by Flywheel.app/Contents/Resources/extraResources/virtual-machine/vendor/docker/osx/docker-machine" ssh local-by-flywheel "route | grep default" | awk '{ print $2 }'`
+
 * Open Local and right-click on the site you want to connect to your Rails app
 * Click “Open Site SSH”
 * Enter nano /etc/hosts
